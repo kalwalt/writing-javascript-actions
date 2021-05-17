@@ -5473,6 +5473,7 @@ async function run() {
     const token = core.getInput("repo-token");
 
     const octokit = new github.getOctokit(token);
+    console.log('what is octokit?');
     console.log(octokit);
 
     const newIssue = await octokit.issues.create({
