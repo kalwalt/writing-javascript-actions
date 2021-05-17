@@ -5479,8 +5479,10 @@ async function run() {
     console.log(github);
 
     const newIssue = await octokit.issues.create({
-      repo: github.context.repo.repo,
-      owner: github.context.repo.owner,
+      //repo: github.context.repo.repo,
+      repo: 'writing-javascript-actions',
+      //owner: github.context.repo.owner,
+      owner: 'kalwalt',
       title: issueTitle,
       body: jokeBody
     });
