@@ -5473,11 +5473,16 @@ async function run() {
     const token = core.getInput("repo-token");
 
     const octokit = new github.getOctokit(token);
+    console.log('what is octokit?');
     console.log(octokit);
+    console.log('what is github?');
+    console.log(github);
 
     const newIssue = await octokit.issues.create({
-      repo: github.context.repo.repo,
-      owner: github.context.repo.owner,
+      //repo: github.context.repo.repo,
+      repo: 'writing-javascript-actions',
+      //owner: github.context.repo.owner,
+      owner: 'kalwalt',
       title: issueTitle,
       body: jokeBody
     });
