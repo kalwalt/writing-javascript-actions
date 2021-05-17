@@ -16,6 +16,7 @@ inputs:
   third-greeting:
     description: "a third greeting"
     required: true
+    default: "kalwalt"
 
 runs:
   using: "node12"
